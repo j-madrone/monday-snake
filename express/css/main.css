@@ -1,0 +1,262 @@
+@import "normalize.css";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
+/* 
+Project Name: Snake
+Author: Jasper Sardonicus
+*/
+
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+body, h1 {
+  color: #000;
+}
+
+body, html, .overlay {
+  height: 100%;
+}
+
+footer {
+  color: #FFF;
+}
+
+footer, .game-board {
+  background: #000;
+}
+
+footer, .pause, .score {
+  font-size: 2rem;
+}
+
+footer, h1 {
+  padding: 2rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+h1, .modal {
+  font-size: 3rem;
+  text-align: center;
+}
+
+header {
+  border-bottom: 2px solid #000;
+  background: #C0D0E7;
+}
+
+.button {
+  height: 17%;
+  width: 50%;
+  margin: auto;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border: 0px solid #000000;
+  background: #0085FF;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:first-of-type {
+  margin-bottom: 5px;
+}
+
+.button:hover {
+  filter: brightness(70%);
+}
+
+.food {
+  animation:changeShadow 2s infinite;
+  -moz-animation:changeShadow 2s infinite; /* Firefox */
+  -webkit-animation:changeShadow 2s infinite; /* Safari and Chrome */
+}
+
+.food, .games-won, .modal, .overlay, .pause, .score, .snake-body {
+  position: absolute;
+}
+
+.food, .snake-body {
+  z-index: 1;
+}
+
+.game-board, .game-wrapper {
+  border: 1px solid black;
+  position: relative;
+}
+
+.game-wrapper {
+  margin: 5.5rem auto;
+  min-height: 100%;
+  padding: 1rem;
+}
+
+.game-wrapper, .modal {
+  border-radius: .5rem;
+}
+
+.games-won {
+  top: -6rem;
+}
+
+.main {
+  flex: 1;
+  justify-content: space-around;
+  background: #F5F6F8;
+}
+
+.modal {
+  width: 40%;
+  height: 50%;
+  top: 25%;
+  left: 30%;
+  background: #F5F6F8;
+}
+
+.modal, .overlay, .pause-message {
+  display: none;
+  z-index: 2;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5); /*dim the background*/
+}
+
+.pause {
+  bottom: -4.5rem;
+}
+
+.score {
+  top: -4.5rem;
+}
+
+.score.player-2, #player-2-games-won {
+  left: 1.5rem;
+}
+
+.score.player-1, #player-1-games-won {
+  right: 1.5rem;
+}
+#container {
+  min-height: 100vh;
+}
+
+#container, .main {
+  display: flex;
+  flex-direction: column;
+}
+
+#player-1-score {
+  right: 1.5rem;
+}
+
+#player-2-score {
+  left: 1.5rem;
+}
+
+@keyframes animateColors
+{
+  0% {background: #FB275C;}
+  10% {background: #FB275C;}
+  20% {background: #FB275C;}
+  30% {background: #FFCC00;}
+  40% {background: #FFCC00;}
+  50% {background: #FFCC00;}
+  60% {background: #00CA72;}
+  70% {background: #00CA72;}
+  80% {background: #00CA72;}
+  90% {background: #00CA72;}
+  100% {background: #FB275C;}
+}
+
+@-moz-keyframes animateColors /* Firefox */
+{
+  0% {background: #FB275C;}
+  10% {background: #FB275C;}
+  20% {background: #FB275C;}
+  30% {background: #FFCC00;}
+  40% {background: #FFCC00;}
+  50% {background: #FFCC00;}
+  60% {background: #00CA72;}
+  70% {background: #00CA72;}
+  80% {background: #00CA72;}
+  90% {background: #00CA72;}
+  100% {background: #FB275C;}
+}
+
+@-webkit-keyframes animateColors /* Safari and Chrome */
+{
+  0% {background: #FB275C;}
+  10% {background: #FB275C;}
+  20% {background: #FB275C;}
+  30% {background: #FFCC00;}
+  40% {background: #FFCC00;}
+  50% {background: #FFCC00;}
+  60% {background: #00CA72;}
+  70% {background: #00CA72;}
+  80% {background: #00CA72;}
+  90% {background: #00CA72;}
+  100% {background: #FB275C;}
+}
+
+@keyframes changeShadow {
+  0% {
+    box-shadow: 0px 0px 20px 2px rgba(54,255,54,1);
+  }
+
+  50% {
+    box-shadow: 0px 0px 0px 0px rgba(54,255,54,1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 20px 2px rgba(54,255,54,1);
+  }
+}
+
+@-webkit-keyframes changeShadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(54,255,54,1);
+  }
+
+  50% {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(54,255,54,1);
+  }
+
+  100% {
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(54,255,54,1);
+  }
+}
+
+@-moz-keyframes changeShadow {
+  0% {
+    -moz-box-shadow: 0px 0px 20px 2px rgba(54,255,54,1);
+  }
+
+  50% {
+    -moz-box-shadow: 0px 0px 0px 0px rgba(54,255,54,1);
+  }
+
+  100% {
+    -moz-box-shadow: 0px 0px 20px 2px rgba(54,255,54,1);
+  }
+}

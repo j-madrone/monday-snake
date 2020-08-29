@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Classic Game of Snake">
+    <title>Snake</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="main">  
+        <div class="game-wrapper">
+          <div class="game-board">
+            <div class="overlay"></div>
+            <div class="modal">
+              <p>Paused</p>
+              <p class="pause-message">Press 'P' or any arrow key to continue</p>
+              <div id="1-player-game" class="button">1 Player</div>
+              <div id="2-player-game" class="button">2 Player</div>
+            </div>
+          </div>
+          <p id="player-1-games-won" class="games-won" />
+          <p id="player-2-games-won" class="games-won" />
+          <p id="player-1-score" class="score"/>
+          <p id="player-2-score" class="score"/>
+          <p class="pause">Press 'P' to pause.</p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

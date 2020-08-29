@@ -1,0 +1,42 @@
+{
+  "name": "snake",
+  "version": "1.0.0",
+  "description": "Two player snake game. Designed by Jasper Sardonicus",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run stop && concurrently \"npm run server\" \"npm run expose\"",
+    "server": "node server.js",
+    "expose": "ngrok http 8301",
+    "stop": "kill-port 8301 && kill-port 4049 && kill-port 4040"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaspersardonicus/Snake.git"
+  },
+  "author": "Jasper Sardonicus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaspersardonicus/Snake/issues"
+  },
+  "homepage": "https://github.com/jaspersardonicus/Snake#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cross-port-killer": "^1.2.1",
+    "ngrok": "^3.2.7"
+  }
+}
