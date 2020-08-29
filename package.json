@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaspersardonicus/Snake.git"
+    "url": "git+https://github.com/jaspersardonicus/monday-snake.git"
   },
   "author": "Jasper Sardonicus",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jaspersardonicus/Snake/issues"
+    "url": "https://github.com/jaspersardonicus/monday-snake/issues"
   },
-  "homepage": "https://github.com/jaspersardonicus/Snake#readme",
+  "homepage": "https://github.com/jaspersardonicus/monday-snake#readme",
   "browserslist": {
     "production": [
       ">0.2%",
